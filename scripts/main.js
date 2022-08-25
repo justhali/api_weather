@@ -1,4 +1,5 @@
-const APIKEY = "f8fd464980c19dd8d5963ae229f2d032";
+// Access to the environnement variables 
+var secretkey = config.SECRET_KEY;
 
 // DATE ET HEURE
 const TODAY = new Date();
@@ -13,7 +14,7 @@ document.querySelector('#currentTime').innerHTML = TIME;
  */
 let apiCall = function(city){
     
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}&units=metric&lang=fr`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${secretkey}&units=metric&lang=fr`;
 
     // Récupération des données de l'API
     fetch(url).then((response) => 
